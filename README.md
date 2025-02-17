@@ -6,4 +6,4 @@
 
 - Şifreleme için kullanıcıdan parola alınmaktadır.
 
-- Hatalı işlemler için "Exception Handling" uygulanmıştır.
+- Olası hatalar için "Exception Handling" uygulanmıştır.
