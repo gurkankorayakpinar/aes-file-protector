@@ -6,6 +6,6 @@
 
 - Şifreleme öncesinde kullanıcının parola belirlemesi gerekmektedir.
 
-- Decryption için parola girilmesi gerekmektedir.
+- Decryption için, daha önce belirlenen parolanın girilmesi gerekmektedir.
 
 - Olası hatalar için "Exception Handling" uygulanmıştır.
