@@ -1,9 +1,11 @@
 # AES File Protector
 
-- Bu proje, bir dosyayı AES kullanarak şifreleyen bir uygulamadır.
+- Bu proje, "deneme.txt" dosyasını AES kullanarak şifreleyen bir uygulamadır.
 
 ***
 
-- Şifreleme için kullanıcıdan parola alınmaktadır.
+- Şifreleme öncesinde kullanıcının parola belirlemesi gerekmektedir.
+
+- Decryption için parola girilmesi gerekmektedir.
 
 - Olası hatalar için "Exception Handling" uygulanmıştır.
