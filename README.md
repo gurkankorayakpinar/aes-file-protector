@@ -8,9 +8,13 @@
 
 - Şifreleme için, öncelikle klasördeki ".txt" uzantılı dosyaların listelenmesi ve kullanıcının seçim yapması sağlanmıştır.
 
-- Kullanıcının parola belirlemesi zorunludur.
+- Klasörde ".txt" uzantılı dosya yoksa, hata mesajı alınması sağlanmıştır.
 
-- Şifrelenen dosyanın ismi, şu anki "tarih ve saat" olarak kaydedilmektedir.
+- Şifreleme işlemi için, kullanıcının parola belirlemesi zorunludur.
+
+- Sadece "space" karakterleri ile parola oluşturulması engellenmiştir.
+
+- Şifrelenen dosyanın ismi, "şu anki tarih ve saat" olarak kaydedilmektedir.
 
 ***
 
@@ -18,10 +22,12 @@
 
 - Şifre çözme için, öncelikle klasördeki ".bin" uzantılı dosyaların listelenmesi ve kullanıcının seçim yapması sağlanmıştır.
 
-- Şifresi çözülen dosyanın ismi, şu anki "tarih ve saat" olarak kaydedilmektedir.
+- Şifresi çözülen dosyanın ismi, "şu anki tarih ve saat" olarak kaydedilmektedir.
 
 ***
 
-- Tarih ve saat bilgisi için `datetime` modülü kullanılmıştır.
+- Şifreleme işlemleri için `pycryptodome` modülü kullanılmıştır.
+
+- Anlık tarih ve saat bilgileri için `datetime` modülü kullanılmıştır.
 
 - Olası hatalar için "Exception Handling" uygulanmıştır.
