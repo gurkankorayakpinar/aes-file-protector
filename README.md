@@ -28,6 +28,4 @@
 
 - Şifreleme işlemleri için `pycryptodome` modülü kullanılmıştır.
 
-- Anlık tarih ve saat bilgileri için `datetime` modülü kullanılmıştır.
-
 - Olası hatalar için "Exception Handling" uygulanmıştır.
