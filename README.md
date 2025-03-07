@@ -1,12 +1,12 @@
 # AES File Protector
 
-- Bu proje, ".txt" uzantılı dosyaları AES kullanarak şifreleyen bir uygulamadır.
+- Bu proje, ".txt" uzantılı dosyaları AES (Advanced Encryption Standard) kullanarak şifreleyen bir uygulamadır.
 
 ***
 
 # 1. Encryption
 
-- Şifreleme için, öncelikle klasördeki ".txt" uzantılı dosyaların listelenmesi ve kullanıcının seçim yapması sağlanmıştır.
+- Şifreleme işlemi için, öncelikle klasördeki ".txt" uzantılı dosyaların listelenmesi ve kullanıcının seçim yapması sağlanmıştır.
 
 - Klasörde ".txt" uzantılı dosya yoksa, hata mesajı alınması sağlanmıştır.
 
@@ -14,15 +14,15 @@
 
 - Sadece "space" karakterleri ile parola oluşturulması engellenmiştir.
 
-- Şifrelenen dosyanın ismi, "şu anki tarih ve saat" olarak kaydedilmektedir.
+- Şifrelenen dosyanın ismi, "şu anki tarih ve saat" olarak kaydedilmektedir. Böylece, her defasında "benzersiz bir isim" oluşması sağlanmaktadır.
 
 ***
 
 # 2. Decryption
 
-- Şifre çözme için, öncelikle klasördeki ".bin" uzantılı dosyaların listelenmesi ve kullanıcının seçim yapması sağlanmıştır.
+- Şifre çözme işlemi için, öncelikle klasördeki ".bin" uzantılı dosyaların listelenmesi ve kullanıcının seçim yapması sağlanmıştır.
 
-- Şifresi çözülen dosyanın ismi, "şu anki tarih ve saat" olarak kaydedilmektedir.
+- Şifresi çözülen dosyanın ismi, "şu anki tarih ve saat" olarak kaydedilmektedir. Böylece, her defasında "benzersiz bir isim" oluşması sağlanmaktadır.
 
 ***
 

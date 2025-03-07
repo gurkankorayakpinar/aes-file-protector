@@ -41,13 +41,13 @@ def encrypt_file(input_filename, output_filename, password):
         print(f"Hata: Şifreleme hatası - {e}")
         return False  # Şifreleme hatası
 
-# Proje klasöründeki tüm ".txt" dosyalarını bulma
+# Proje klasöründeki tüm ".txt" dosyalarını bul.
 txt_files = [f for f in os.listdir() if f.endswith(".txt")]
 
 if not txt_files:
     print("Hata: Şifrelenecek .txt dosyası bulunamadı.")
 else:
-    # Kullanıcıya hangi dosyanın şifreleneceğini sorma
+    # Kullanıcıya hangi dosyanın şifreleneceğini sor.
     print("Mevcut .txt dosyaları:")
     for i, file in enumerate(txt_files, 1):
         print(f"{i}. {file}")
