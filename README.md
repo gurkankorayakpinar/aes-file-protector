@@ -10,9 +10,9 @@
 
 - Klasörde ".txt" uzantılı dosya yoksa, hata mesajı alınması sağlanmıştır.
 
-- Şifreleme işlemi için, kullanıcının parola belirlemesi zorunludur.
+- Şifreleme öncesinde kullanıcının parola belirlemesi zorunludur.
 
-- Sadece "space" karakterleri ile parola oluşturulması engellenmiştir.
+- Parola için, "boşluk" dışında en az 1 karakter belirlenmesi gerekmektedir.
 
 - Şifrelenen dosyanın ismi, "şu anki tarih ve saat" olarak kaydedilmektedir. Böylece, her defasında "benzersiz bir isim" oluşması sağlanmaktadır.
 
@@ -29,3 +29,7 @@
 - Şifreleme işlemleri için `pycryptodome` modülü kullanılmıştır.
 
 - Olası hatalar için "Exception Handling" uygulanmıştır.
+
+# Düzeltilecek veya eklenecek özellikler
+
+- Minimum 5 karakterden oluşan parola belirlenmesi sağlanacak.

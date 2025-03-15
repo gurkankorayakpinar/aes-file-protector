@@ -12,7 +12,7 @@ def derive_key(password: str, salt: bytes):
 def encrypt_file(input_filename, output_filename, password):
     try:
         with open(input_filename, 'rb') as f:
-            plaintext = f.read()  # Dosya içeriğini oku
+            plaintext = f.read()  # Dosya içeriğini oku.
 
         salt = os.urandom(16)  # 16 byte boyutunda rastgele salt
         iv = os.urandom(16)    # 16 byte boyutunda rastgele IV
@@ -52,7 +52,7 @@ else:
     for i, file in enumerate(txt_files, 1):
         print(f"{i}. {file}")
     
-    # Kullanıcıdan dosya seçmesi istenir.
+    # Kullanıcıdan dosya seçmesini iste.
     choice = input(f"Lütfen şifrelenecek dosyanın numarasını girin (1-{len(txt_files)}): ").strip()
     
     try:

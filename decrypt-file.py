@@ -22,17 +22,17 @@ def decrypt_file(input_filename, password):
         cipher = AES.new(key, AES.MODE_CBC, iv)
         
         try:
-            # Şifre çözme
+            # Şifre çözme işlemi
             decrypted_padded = cipher.decrypt(ciphertext)
             decrypted_text = unpad(decrypted_padded, AES.block_size)  # Padding'i kaldır
 
-            # Şu anki tarih ve saati al
+            # Şu anki tarih ve saat bilgisini al.
             current_datetime = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
 
-            # Çözülen dosyanın ismini, tarih ve saat bilgisiyle oluştur
-            output_filename = f"{current_datetime}.txt"  # .txt uzantısı veriyoruz, çünkü çözülmüş dosya, metin dosyası olacak.
+            # Çözülen dosyanın ismini, tarih ve saat bilgisiyle oluştur.
+            output_filename = f"{current_datetime}.txt"  # Çözülen dosyanın "metin dosyası" olması için "".txt" uzantısı ayarlandı.
 
-            # Çözülen dosyayı kaydetme
+            # Çözülen dosyayı kaydet.
             with open(output_filename, 'wb') as f:
                 f.write(decrypted_text)
 
@@ -56,7 +56,7 @@ def decrypt_file(input_filename, password):
         print(f"Bilinmeyen bir hata oluştu: {e}")
         return False  # Diğer bilinmeyen hatalar
 
-# Proje klasöründeki tüm ".bin" dosyalarını bul.
+# Proje klasöründeki tüm ".bin" uzantılı dosyaları bul.
 bin_files = [f for f in os.listdir() if f.endswith(".bin")]
 
 if not bin_files:
