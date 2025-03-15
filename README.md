@@ -30,6 +30,8 @@
 
 - Olası hatalar için "Exception Handling" uygulanmıştır.
 
+***
+
 # Düzeltilecek veya eklenecek özellikler
 
 - Minimum 5 karakterden oluşan parola belirlenmesi sağlanacak.
