@@ -10,7 +10,7 @@
 
 - Klasörde ".txt" uzantılı dosya olmaması hâlinde, hata mesajı alınması sağlanmıştır.
 
-- İşlemin tamamlanabilmesi için kullanıcının parola belirlemesi zorunludur.
+- Kullanıcının parola belirlemesi zorunludur.
 
 - Parola için, "boşluk" dışında en az 1 karakter belirlenmesi gerekmektedir.
 
