@@ -8,9 +8,9 @@
 
 - Şifreleme işlemi için, öncelikle klasördeki ".txt" uzantılı dosyaların listelenmesi ve kullanıcının seçim yapması sağlanmıştır.
 
-- Klasörde ".txt" uzantılı dosya yoksa, hata mesajı alınması sağlanmıştır.
+- Klasörde ".txt" uzantılı dosya olmaması hâlinde, hata mesajı alınması sağlanmıştır.
 
-- Şifreleme öncesinde kullanıcının parola belirlemesi zorunludur.
+- İşlemin tamamlanabilmesi için kullanıcının parola belirlemesi zorunludur.
 
 - Parola için, "boşluk" dışında en az 1 karakter belirlenmesi gerekmektedir.
 

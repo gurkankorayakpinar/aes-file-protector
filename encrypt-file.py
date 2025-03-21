@@ -4,7 +4,7 @@ from Crypto.Util.Padding import pad
 import os
 from datetime import datetime
 
-# Parolayı kullanarak AES için 32 byte boyutunda bir anahtar türetme
+# Parola belirlendikten sonra AES için 32 byte boyutunda bir anahtar türet.
 def derive_key(password: str, salt: bytes):
     return PBKDF2(password, salt, dkLen=32)
 
@@ -31,7 +31,7 @@ def encrypt_file(input_filename, output_filename, password):
 
     except FileNotFoundError:
         print(f"Hata: Dosya '{input_filename}' bulunamadı.")
-        return False  # Dosya bulunamadı hatası
+        return False  # "Dosya bulunamadı" hatası
 
     except PermissionError:
         print(f"Hata: Dosyayı okuma veya yazma izniniz yok.")
@@ -41,7 +41,7 @@ def encrypt_file(input_filename, output_filename, password):
         print(f"Hata: Şifreleme hatası - {e}")
         return False  # Şifreleme hatası
 
-# Proje klasöründeki tüm ".txt" dosyalarını bul.
+# Proje klasöründeki tüm ".txt" uzantılı dosyaları bul.
 txt_files = [f for f in os.listdir() if f.endswith(".txt")]
 
 if not txt_files:
@@ -68,11 +68,11 @@ else:
                 if not password:  # Parola boşsa
                     print("Parola boş olamaz. Lütfen geçerli bir parola girin.")
 
-            # Benzersiz bir dosya ismi oluşturmak için tarih ve saat bilgisini kullan.
+            # Benzersiz bir dosya ismi oluşturmak için "şu anki tarih ve saat" bilgisini kullan.
             current_time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
             output_file = f"{current_time}.bin"
             
-            # Şifrelemeyi dene.
+            # Şifrele.
             encrypt_file(selected_file, output_file, password)
         else:
             print("Geçersiz seçim.")

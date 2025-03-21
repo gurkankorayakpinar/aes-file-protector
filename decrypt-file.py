@@ -4,7 +4,7 @@ from Crypto.Util.Padding import unpad
 import os
 from datetime import datetime
 
-# Parolayı kullanarak AES için 32 byte boyutunda bir anahtar türet.
+# Parola girildikten sonra AES için 32 byte boyutunda bir anahtar türet.
 def derive_key(password: str, salt: bytes):
     return PBKDF2(password, salt, dkLen=32)
 
@@ -26,11 +26,11 @@ def decrypt_file(input_filename, password):
             decrypted_padded = cipher.decrypt(ciphertext)
             decrypted_text = unpad(decrypted_padded, AES.block_size)  # Padding'i kaldır
 
-            # Şu anki tarih ve saat bilgisini al.
+            # Şu anki tarih ve saat bilgisi
             current_datetime = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
 
-            # Çözülen dosyanın ismini, tarih ve saat bilgisiyle oluştur.
-            output_filename = f"{current_datetime}.txt"  # Çözülen dosyanın "metin dosyası" olması için "".txt" uzantısı ayarlandı.
+            # Çözülen dosyanın ismi, "şu anki tarih ve saat" olarak belirlenir.
+            output_filename = f"{current_datetime}.txt"  # Çözülen dosyanın "metin dosyası" olması (yani ilk hâline dönmesi) için ".txt" uzantısı ayarlandı.
 
             # Çözülen dosyayı kaydet.
             with open(output_filename, 'wb') as f:
@@ -46,7 +46,7 @@ def decrypt_file(input_filename, password):
 
     except FileNotFoundError:
         print(f"Hata: Dosya '{input_filename}' bulunamadı.")
-        return False  # Dosya bulunamadı hatası
+        return False  # "Dosya bulunamadı" hatası
 
     except PermissionError:
         print(f"Hata: Dosyayı okuma veya yazma izniniz yok.")
@@ -83,7 +83,7 @@ else:
                 if not password:  # Parola boşsa
                     print("Parola boş olamaz. Lütfen geçerli bir parola girin.")
 
-            # Şifreyi çözmeyi dene.
+            # Şifreyi çöz.
             decrypt_file(selected_file, password)
         else:
             print("Geçersiz seçim.")
