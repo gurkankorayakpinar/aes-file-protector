@@ -31,6 +31,8 @@
 - Olası hatalar için "Exception Handling" uygulanmıştır.
 
 ***
+***
+***
 
 # Düzeltilecek veya eklenecek özellikler
 
